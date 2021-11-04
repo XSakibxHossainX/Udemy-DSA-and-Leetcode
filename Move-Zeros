@@ -1,0 +1,41 @@
+        Integer[] nums = new Integer[]{0,1,0,3,12};
+        int count = 0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                nums[count]=nums[i];
+                count++;
+            }
+        }
+        for(int i=count;i<nums.length;i++){
+            nums[i]=0;
+        }
+        
+        for(int i=0;i<nums.length;i++){
+            System.out.print(nums[i]+" ");
+        }
+
+Speed : 123 ms	
+Memory : 40.6 MB
+
+/////////////////////bit Faster than above//////////////////
+import static java.lang.System.out;
+import java.util.Arrays;
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int count = 0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                nums[count] = nums[i];
+                count++;
+            }
+        }
+        for(int i=count;i<nums.length;i++){
+            nums[i] = 0;
+        }
+        
+        out.print(Arrays.toString(nums));
+    }
+}
+
+Speed : 9 ms
+Memory : 40.6 MB
